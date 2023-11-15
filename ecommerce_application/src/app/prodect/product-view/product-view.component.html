@@ -9,22 +9,22 @@
 </div>
 
 <div class="container-flid">
-    <div class="row">
-        <div class="col-md-3 mt-3">
+    <div class="row ">
+        <div class="col-md-3 mt-3" *ngFor="let data of productData?.products">
             <div class="card mt-2">
                 <div class="card-body">
                     <div class="card-img-actions">
-                        <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/pendrive/pendrive/e/p/x/v220g-2in-otg-free-hp-original-imagtpy85ydyhh9s.jpeg?q=70" class="card-img img-fluid">
+                        <img src="{{data.thumbnail}}" class="card-img img-fluid ">
                     </div>
                 </div>
                 <div class="card-body bg-light text-center">
                     <div>
                         <h6 class="font-weight-semibold">
-                            <a class="font-weight">HP 128GB 2In1 pendrive
+                            <a class="font-weight"> {{data.title}}
                             </a>
                         </h6>
                     </div>
-                    <h3> $ 13.00 </h3>
+                    <h3> $ {{data.price}} </h3>
                     <button class="btn btn-sm btn-dark mt-2 me-1"> View Details</button>
                     <button class="btn btn-sm btn-danger mt-2">Add to cart</button>
                 </div>
