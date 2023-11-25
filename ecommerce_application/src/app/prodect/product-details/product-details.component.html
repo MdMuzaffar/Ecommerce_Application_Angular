@@ -1,15 +1,31 @@
 <nav class="navbar bg-dark">
     <div class="container-fluid">
-        <div class="navbar-brand" style="color: white;"> E-commerce website</div>
+        <div class="navbar-brand" style="color: white;">
+            <a href="navbar-brand">
+              E-commerce website
+          </a>
+        </div>
+        <button routerLink="/" class="btn btn-danger">Back</button>
     </div>
 </nav>
 <div class="container">
     <div class="row product-detail">
         <div class="col-sm-3">
             <img src="" alt="">
+            <div class="buttons">
+                <button class="btn btn-primary">Buy now</button> &nbsp;
+                <button class="btn btn-success">Add to cart</button>
+            </div>
         </div>
-        <button class="btn btn-primary">Buy now</button>
-        <button class="btn btn-success">Add to cart</button>
+        <div class="col-sm-8">
+            <h1>Hp Pen drive</h1>
+            <p>price</p>
+            <h3>Special price $:30.00</h3>
+            <strong> Category: Electronics</strong><br>
+            <strong> Description</strong>
+            <p>content goes here.....................</p>
+            <p>Discount: 12%</p>
+        </div>
     </div>
 </div>
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
