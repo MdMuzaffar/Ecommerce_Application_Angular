@@ -12,4 +12,8 @@ export class ApiService {
   getProduct() {
     return this.http.get<product[]>('https://dummyjson.com/products');
   }
+
+  getproductbyid(id:string){
+    return this.http.get('https://dummyjson.com/products'+id);
+  }
 }
