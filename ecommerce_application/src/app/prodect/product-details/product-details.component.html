@@ -11,10 +11,11 @@
 <div class="container">
     <div class="row product-detail">
         <div class="col-sm-3">
-            <img src="" alt="">
+            <img src="{{productdata?.images[0]}}" alt="">
             <div class="buttons">
                 <button class="btn btn-primary">Buy now</button> &nbsp;
-                <button class="btn btn-success">Add to cart</button>
+                <button class="btn btn-success" *ngIf="showadd" (click)="addtocart()">Add to cart</button>
+                <button class="btn btn-success" *ngIf="showremove" (click)="showremoves()">Remove Item</button>
             </div>
         </div>
         <div class="col-sm-8">
