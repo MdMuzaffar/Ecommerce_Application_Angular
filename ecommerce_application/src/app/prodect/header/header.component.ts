@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/shared/api.service';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   cartitems:number = 0;
+
+  constructor(private api:ApiService){}
   ngOnInit(): void {
-    
+    this.api.product().subscribe((res)=> {
+      this.cartitems = res.length;
+    })
   }
 
 }

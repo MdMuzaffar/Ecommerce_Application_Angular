@@ -19,7 +19,7 @@ export class ProductDetailsComponent implements OnInit{
 
     productid && this.apiService.getproductbyid(productid).subscribe((res)=>{
       this.productdata = res;
-      console.log(this.productdata)
+      console.log(' Muzaffar',this.productdata)
     })
   }
 

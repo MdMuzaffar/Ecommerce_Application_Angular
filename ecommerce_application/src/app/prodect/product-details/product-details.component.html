@@ -19,14 +19,14 @@
             </div>
         </div>
         <div class="col-sm-8">
-            <h1>Hp Pen drive</h1>
+            <h1>{{productdata?.title}}</h1>
             <p>price</p>
-            <h3>Special price $:30.00</h3>
-            <strong> Category: Electronics</strong><br>
+            <h3>Special price $:{{productdata?.price}}</h3>
+            <strong> Category: {{productdata?.category}}</strong><br>
             <strong> Description</strong>
-            <p>content goes here.....................</p>
-            <p>Discount: 12%</p><br>
-            <strong>Stocks : 10 Units left</strong>
+            <p>{{productdata?.description}}</p>
+            <p>Discount: {{productdata?.discountPercentage}}% </p><br>
+            <strong>Stocks : {{productdata?.stock}}</strong>
         </div>
     </div>
 </div>

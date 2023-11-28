@@ -28,7 +28,7 @@
                     </div>
                     <h3> $ {{data.price}} </h3>
                     <button routerLink="product-detail/{{data.id}}" class="btn btn-sm btn-dark mt-2 me-1"> View Details</button>
-                    <button class="btn btn-sm btn-warning mt-2"><i class="fa fa-cart-plus mr-2"></i>Add to cart</button>
+                    <button (click)="addtocart(data)" class="btn btn-sm btn-warning mt-2"><i class="fa fa-cart-plus mr-2"></i>Add to cart</button>
                     <button class="btn btn-sm btn-danger mt-2">Remove</button>
                 </div>
             </div>

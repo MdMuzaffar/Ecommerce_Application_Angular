@@ -1,11 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { product } from '../prodect/productmodel';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
+  cartitemlist:any = [];
+  productlist = new BehaviorSubject<any>([]);
 
   constructor(private http:HttpClient) { }
 
@@ -15,5 +18,15 @@ export class ApiService {
 
   getproductbyid(id:string){
     return this.http.get('https://dummyjson.com/products/'+id);
+  }
+
+  addtocart(data: product){
+    this.cartitemlist.push(data);
+    this.productlist.next(this.cartitemlist);
+    console.log(this.cartitemlist);
+  }
+
+  product(){
+    return this.productlist.asObservable();
   }
 }
