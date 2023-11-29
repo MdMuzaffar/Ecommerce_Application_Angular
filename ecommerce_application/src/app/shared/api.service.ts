@@ -29,4 +29,13 @@ export class ApiService {
   product(){
     return this.productlist.asObservable();
   }
+
+  removeitem(data:product){
+    this.cartitemlist.map((a:product, index:product) =>{
+      if(data.id === a.id){
+        this.cartitemlist.splice(index,1)
+      }
+    })
+    this.productlist.next(this.cartitemlist)
+  }
 }
