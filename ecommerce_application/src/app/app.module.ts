@@ -7,8 +7,11 @@ import { AppComponent } from './app.component';
 import { ProductViewComponent } from './prodect/product-view/product-view.component';
 import { ProductDetailsComponent } from './prodect/product-details/product-details.component';
 import { HeaderComponent } from './prodect/header/header.component';
-import { CartPageComponent } from './prdect/cart-page/cart-page.component';
+import { CartPageComponent } from './prodect/cart-page/cart-page.component';
+// import {  } from './prdect/cart-page/CartProductComponent';
 import { CartProductComponent } from './prodect/cart-product/cart-product.component';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { CartProductComponent } from './prodect/cart-product/cart-product.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
