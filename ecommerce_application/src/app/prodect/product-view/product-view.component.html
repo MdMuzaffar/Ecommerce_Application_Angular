@@ -14,7 +14,7 @@
             <div class="card mt-2">
                 <div class="card-body">
                     <div class="card-img-actions">
-                        <img routerLink="/product-detail" src="{{data.thumbnail}}" class="card-img img-fluid ">
+                        <img routerLink="/product-detail/:productid" src="{{data.thumbnail}}" class="card-img img-fluid ">
                     </div>
                 </div>
                 <div class="card-body bg-light text-center">
@@ -25,7 +25,7 @@
                         </h6>
                     </div>
                     <h3> $ {{data.price}} </h3>
-                    <button class="btn btn-sm btn-dark mt-2 me-1"> View Details</button>
+                    <button routerLink="/product-detail/:productid" class="btn btn-sm btn-dark mt-2 me-1"> View Details</button>
                     <button (click)="addtocart(data)" class="btn btn-sm btn-warning mt-2"><i class="fa fa-cart-plus mr-2"></i>Add to cart</button>
                     <button (click)="removeitem(data)" class="btn btn-sm btn-danger mt-2">Remove</button>
                 </div>

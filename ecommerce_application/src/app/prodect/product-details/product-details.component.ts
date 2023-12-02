@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute , Router } from '@angular/router';
 import { ApiService } from 'src/app/shared/api.service';
 import { product } from '../productmodel';
 
@@ -12,9 +12,9 @@ export class ProductDetailsComponent implements OnInit{
   productdata:any | product;
   showadd: boolean= true;
   showremove: boolean= false
-  constructor(private apiService : ApiService , private activatedRoute: ActivatedRoute ){}
+  constructor(private apiService : ApiService , private activatedRoute: ActivatedRoute , private route:Router ){}
   ngOnInit(): void {
-    let productid = this.activatedRoute.snapshot.paramMap.get('productid');
+    let productid = this.activatedRoute.snapshot.paramMap.get('productid') ?? 'defaultProductId';
     console.log('product id is : ' , productid)
 
     productid && this.apiService.getproductbyid(productid).subscribe((res)=>{
