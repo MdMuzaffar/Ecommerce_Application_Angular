@@ -23,13 +23,17 @@ export class ProductDetailsComponent implements OnInit{
     })
   }
 
-  addtocart(){
+  addtocart(productdata:product){
     this.showadd = false;
     this.showremove = true;
-
+    this.apiService.addtocart(productdata)
   }
-  showremoves(){
+  showremoves(productdata:product){
     this.showadd = true;
     this.showremove = false
+    this.apiService.removeitem(productdata)
   }
+
+  
+
 }

@@ -14,8 +14,8 @@
             <img src="{{productdata?.images[0]}}" alt="">
             <div class="buttons">
                 <button class="btn btn-primary">Buy now</button> &nbsp;
-                <button class="btn btn-success" *ngIf="showadd" (click)="addtocart()">Add to cart</button>
-                <button class="btn btn-success" *ngIf="showremove" (click)="showremoves()">Remove Item</button>
+                <button class="btn btn-success" (click)="addtocart(productdata)" *ngIf="showadd">Add to cart</button>
+                <button class="btn btn-success" (click)="showremoves(productdata)" *ngIf="showremove">Remove Item</button>
             </div>
         </div>
         <div class="col-sm-8">
