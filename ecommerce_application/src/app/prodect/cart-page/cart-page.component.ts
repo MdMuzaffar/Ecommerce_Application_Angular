@@ -9,6 +9,7 @@ import { product } from '../productmodel';
 })
 export class CartPageComponent implements OnInit{
 showProduct:any = [];
+totalamount:number = 0;
 constructor(private api:ApiService) {
  
 }
@@ -17,9 +18,14 @@ constructor(private api:ApiService) {
       this.showProduct = data;
       console.log(this.showProduct)
     })
+    this.totalamount = this.api.calculateprice();
   }
 
   deleteItem(product:product){
     this.api.removeitem(product);
   }
+
+  // totalamount(){
+  //   this.api.calculateprice().subscribe((res)=> {})
+  // }
 }
