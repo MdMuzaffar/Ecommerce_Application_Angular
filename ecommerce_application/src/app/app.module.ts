@@ -11,6 +11,7 @@ import { CartPageComponent } from './prodect/cart-page/cart-page.component';
 // import {  } from './prdect/cart-page/CartProductComponent';
 import { CartProductComponent } from './prodect/cart-product/cart-product.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

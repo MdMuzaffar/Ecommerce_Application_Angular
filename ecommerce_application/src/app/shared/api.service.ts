@@ -46,4 +46,9 @@ export class ApiService {
     })
     return total;
   }
+
+  removeallitems(){
+    this.cartitemlist = [];
+    this.productlist.next(this.cartitemlist)
+  }
 }

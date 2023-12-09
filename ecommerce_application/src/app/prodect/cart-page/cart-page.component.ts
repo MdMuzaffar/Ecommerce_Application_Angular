@@ -28,4 +28,8 @@ constructor(private api:ApiService) {
   // totalamount(){
   //   this.api.calculateprice().subscribe((res)=> {})
   // }
+
+  cartempty(){
+    this.api.removeallitems();
+  }
 }
